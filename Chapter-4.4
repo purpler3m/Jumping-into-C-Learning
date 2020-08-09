@@ -1,0 +1,41 @@
+//Expand the password checking program from earlier in this chapter and make it take multiple usernames, each with their own password, and ensure that the right username is used for the right password
+//Provide the ability to prompt users again if the first login attempt failed.  Think about how easy (or hard_ it is to do this for a lot of usernames and passwords.
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string username;
+    string password;
+
+    cout << "Please enter your username: ";
+    cin >> username;
+
+    cout << "Please enter your password: ";
+    cin >>password;
+
+    while ((username == "root" && password != "root") || (username == "Dan" && password != "money") || (username == "mario" && password != "luigi") || (username == "robot" && password != "fsociety"))
+        {
+            cout << "The username or password is incorrect, try again!" << endl;
+
+            cout << "Please enter your username: ";
+            cin >> username;
+
+            cout << "Please enter your password: ";
+            cin >> password;
+    
+        }
+
+   if ((username == "root" && password == "root") || (username == "Dan" && password == "money") || (username == "mario" && password == "luigi") || (username == "robot" && password == "fsociety"))
+    {
+        cout << "Welcome " << username << " your access is granted!!" << endl;
+    }
+
+   else 
+    {
+        cout << username << "You only have one try, sorry!" << endl;
+    }
+    return 0;
+}
