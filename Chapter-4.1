@@ -1,0 +1,45 @@
+// Ask the user for two users' ages, and indicate who is older; behave differently if both are over 100.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    int age_one, age_two;
+    string name_one;
+    string name_two;
+
+
+    cout << "Please enter the name of the first user" << endl;
+    cin >> name_one;
+
+    cout << "Please enter the first user's age" << endl;
+    cin >> age_one;
+
+    cout << "Plese enter the name of the second user" << endl;
+    cin >> name_two;
+
+    cout << "Please enter the second user's age" << endl;
+    cin >> age_two;
+
+    if ( age_one > age_two)
+    {
+        cout << name_one << " is older than " << name_two << endl;
+    }
+    else if (age_one < age_two)
+    {
+        cout << name_two << " is older than " << name_one << endl;
+    }
+    else if (age_one && age_two > 100)
+    {
+        cout << "Congratulations you are a centanarian" << endl;
+    }
+    else
+    {
+        cout << "You both are the same age, what a coincidence" << endl;
+    }
+
+    return 0;
+}
