@@ -1,0 +1,30 @@
+// Write a program that prints out the entire lyrics to a full rendition of "99 Bottles of Beer".
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int bottle = 99;
+    while ( bottle > 0 )
+        {
+
+    cout << bottle << " bottle of beer on the wall, "
+         << bottle << " bottle of beer. " << endl;
+
+    bottle--;
+
+    cout << "Take one down, pass it around, " << bottle << " "
+         << "bottle of beer on the wall " << endl;
+
+
+    if (bottle <= 1)
+    {
+        break;
+    }
+
+        }
+
+    return 0;
+}
